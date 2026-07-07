@@ -3,7 +3,7 @@ import random
 import sys
 import math
 import os
-
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # ==========================================
 # 1. 初期設定 & オーディオ初期化
 # ==========================================

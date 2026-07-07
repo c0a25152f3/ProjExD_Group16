@@ -323,11 +323,25 @@ def create_enemy():
     offset_ja = -65 if enemy_type_idx == 0 else -85
     offset_en = -40 if enemy_type_idx == 0 else -60
     
+    # ★変更箇所：最長の敵（enemy_type_idx が 4）ならベースポイントを200、それ以外は100にする
+    if enemy_type_idx == 4:
+        base_score = 200
+    else:
+        base_score = 100
+    
+    # 20%の確率でスコアが2倍になるフラグを設定
+    if random.random() < 0.20:
+        score_multiplier = 2
+    else:
+        score_multiplier = 1
+    
     return {
         "x": x, "y": y, "move_dir": move_dir,  
         "word_ja": word_data["ja"], "word_en": word_data["en"], "index": 0,
         "speed": random.uniform(0.5, 1.0) + (score // 1000) * 0.1,
-        "image": chosen_image, "rot_angle": rot_angle, "offset_ja": offset_ja, "offset_en": offset_en
+        "image": chosen_image, "rot_angle": rot_angle, "offset_ja": offset_ja, "offset_en": offset_en,
+        "base_score": base_score,          # ベーススコアを保持
+        "score_multiplier": score_multiplier  # 倍率データを保持
     }
 
 enemies.append(create_enemy())
@@ -373,7 +387,9 @@ while running:
                 
                 shake_frames = 15 
                 combo_count += 1
-                score += 100 * combo_count
+                
+                # ★変更箇所：敵のベースポイント（100 or 200）にコンボ数と倍率を掛け合わせる
+                score += (locked_enemy["base_score"] * combo_count) * locked_enemy["score_multiplier"]
                     
                 enemies.remove(locked_enemy)
                 locked_enemy = None
@@ -437,7 +453,10 @@ while running:
         new_rect = rotated_enemy_img.get_rect(center=(int(e["x"]), int(e["y"])))
         screen.blit(rotated_enemy_img, (new_rect.x + offset_x, new_rect.y + offset_y))
 
-        surf_ja = font_ja.render(e["word_ja"], True, TEXT_JA_COLOR)
+        # ポイント2倍の敵の日本語を黄色（LOCKED_COLOR）にして見分けやすくする
+        ja_color = LOCKED_COLOR if e["score_multiplier"] == 2 else TEXT_JA_COLOR
+        surf_ja = font_ja.render(e["word_ja"], True, ja_color)
+        
         color_en = LOCKED_COLOR if e == locked_enemy else ENEMY_COLOR
         typed_part, untyped_part = e["word_en"][:e["index"]], e["word_en"][e["index"]:]
         surf_typed = font_word.render(typed_part, True, TEXT_TYPED)

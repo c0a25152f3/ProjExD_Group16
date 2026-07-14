@@ -242,7 +242,7 @@ ENEMY_TYPES = [
         {"ja": "どらえもん", "en": "DORAEMON"},
         {"ja": "のびのびた", "en": "NOBINOBITA"},
         {"ja": "しずかちゃん", "en": "SIZUKATYAN"},
-        {"ja": "ジャイアン", "en": "JAIAN"},
+        {"ja": "ジャイアン", "en": "IAN"},
         {"ja": "くれしん", "en": "KURESIN"},
         {"ja": "あんぱんまん", "en": "ANPANMAN"},
         {"ja": "しょくぱんまん", "en": "SYOKUPANMAN"},

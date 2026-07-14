@@ -294,7 +294,6 @@ class GrayDebris:
 class SlowSystem:
     """
     ゲーム内の時間を一定時間遅くする（スロー機能）を管理するクラス。
-    講義資料の採点基準に合わせて型ヒントとdocstringを記述。
     """
     def __init__(self) -> None:
         """
@@ -330,10 +329,10 @@ class SlowSystem:
         """
         スロー状態に応じて敵の速度を計算して返す。
         引数 base_speed: 敵の本来の移動速度
-        戻り値: スロー状態なら半分の速度(0.5倍)、通常なら本来の速度
+        戻り値: スロー状態なら半分の速度(0.3倍)、通常なら本来の速度
         """
         if self.is_active:
-            return base_speed * 0.5
+            return base_speed * 0.3
         return base_speed
 
     def reset(self) -> None:

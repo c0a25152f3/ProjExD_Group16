@@ -69,7 +69,7 @@ def load_img(filename, w, h, fallback_color_idx):
 # 🎵 サウンドファイルの読み込み & 音量調整
 # ==========================================
 def load_sound(filename):
-    # ex5フォルダから見た「ゲーム」フォルダ内のパスに修正
+    # ex5フォルダから見た「ゲーム'」フォルダ内のパスに修正
     actual_path = os.path.join("ゲーム", filename)
     if os.path.exists(actual_path):
         try:
@@ -125,69 +125,70 @@ enemy_images = [
 ENEMY_TYPES = [
     # 種類 0: 【短め】3〜5文字
     [
-        {"ja": "すたんど", "en": "SUTANDO"}, {"ja": "はもん", "en": "HAMON"},
-        {"ja": "ふぉーす", "en": "FOOSU"}, {"ja": "じぇだい", "en": "JEDAI"},
-        {"ja": "しす", "en": "SHISU"}, {"ja": "らいとせーばー", "en": "RAITOSEEBAA"},
-        {"ja": "ひーろー", "en": "HIIROO"}, {"ja": "かいじん", "en": "KAIJIN"},
-        {"ja": "さいたま", "en": "SAITAMA"}, {"ja": "じぇのす", "en": "JENOSU"},
-        {"ja": "いかげーむ", "en": "IKAGEEMU"}, {"ja": "だるまさん", "en": "DARUMASAN"},
-        {"ja": "かたぬき", "en": "KATANUKI"}, {"ja": "ぎふん", "en": "GIFUN"},
-        {"ja": "ふろんとまん", "en": "FURONTOMAN"}, {"ja": "いしかめん", "en": "ISHIKAMEN"},
-        {"ja": "ていこく", "en": "TEIKOKU"}, {"ja": "ですすたー", "en": "DESUSUTAA"},
-        {"ja": "わんぱん", "en": "WANPAN"}, {"ja": "ますく", "en": "MASUKU"}
+        {"ja": "すたんど", "en": "SUTANDO"},{"ja": "はもん", "en": "HAMON"},
+        {"ja": "ふぉーす", "en": "FOOSU"},{"ja": "じぇだい", "en": "JEDAI"},
+        {"ja": "しす", "en": "SISU"},{"ja": "らいとせーばー", "en": "RAITOSEEBAA"},
+        {"ja": "ひーろー", "en": "HIIROO"},{"ja": "かいじん", "en": "KAIZIN"},
+        {"ja": "さいたま", "en": "SAITAMA"},{"ja": "じぇのす", "en": "JENOSU"},
+        {"ja": "いかげーむ", "en": "IKAGEEMU"},{"ja": "だるまさん", "en": "DARUMASAN"},
+        {"ja": "かたぬき", "en": "KATANUKI"},{"ja": "ぎふん", "en": "GIHUN"},
+        {"ja": "ふろんとまん", "en": "HURONTOMAN"},{"ja": "いしかめん", "en": "ISIKAMEN"},
+        {"ja": "ていこく", "en": "TEIKOKU"},{"ja": "ですすたー", "en": "DESUSUTAA"},
+        {"ja": "わんぱん", "en": "WANPAN"},{"ja": "ますく", "en": "MASUKU"}
     ],
     # 種類 1: 【標準】5〜8文字
     [
-        {"ja": "しびれる", "en": "SHIBIRERU"}, {"ja": "あこがれる", "en": "AKOGARERU"},
-        {"ja": "くろいせいし", "en": "kuroiseisi"}, {"ja": "あります", "en": "ARIMASU"},
-        {"ja": "いやなよかん", "en": "IYANAYOKAN"}, {"ja": "ふつうのぱんち", "en": "FUTSUUNOPANCHI"},
-        {"ja": "れんぞく", "en": "RENZOKU"}, {"ja": "まじなぐり", "en": "MAJINAGURI"},
-        {"ja": "むきゅう", "en": "MUKYUU"}, {"ja": "ぶいあいぴー", "en": "BUIAIPII"},
-        {"ja": "つなひき", "en": "TSUNAHIKI"}, {"ja": "びーだま", "en": "BIIDAMA"},
-        {"ja": "がらすのはし", "en": "GARASUNOHASHI"}, {"ja": "ごーるど", "en": "GOORUDO"},
-        {"ja": "すたーぷらちな", "en": "SUTAAPURACHINA"}, {"ja": "ざわーるど", "en": "ZAWAARUDO"},
-        {"ja": "だーすべいだー", "en": "DAASUBEIDAA"}, {"ja": "とるーぱー", "en": "TORUUPAA"},
-        {"ja": "たつまき", "en": "TATSUMAKI"}, {"ja": "きんぐえんじん", "en": "KINGUENJIN"},{"ja": "もうちがう", "en": "mouchigau"}
+        {"ja": "しびれる", "en": "SIBIRERU"},{"ja": "あこがれる", "en": "AKOGARERU"},
+        {"ja": "くろいせいし", "en": "KUROISEISI"},{"ja": "あります", "en": "ARIMASU"},
+        {"ja": "いやなよかん", "en": "IYANAYOKAN"},{"ja": "ふつうのぱんち", "en": "HUTUUNOPANTI"},
+        {"ja": "れんぞく", "en": "RENZOKU"},{"ja": "まじなぐり", "en": "MAZINAGURI"},
+        {"ja": "むきゅう", "en": "MUKYUU"},{"ja": "ぶいあいぴー", "en": "BUIAIPII"},
+        {"ja": "つなひき", "en": "TUNAHIKI"},{"ja": "びーだま", "en": "BIIDAMA"},
+        {"ja": "がらすのはし", "en": "GARASUNOHASI"},{"ja": "ごーるど", "en": "GOORUDO"},
+        {"ja": "すたーぷらちな", "en": "SUTAAPURATINA"},{"ja": "ざわーるど", "en": "ZAWAARUDO"},
+        {"ja": "だーすべいだー", "en": "DAASUBEIDAA"},{"ja": "とるーぱー", "en": "TORUUPAA"},
+        {"ja": "たつまき", "en": "TATUMAKI"},{"ja": "きんぐえんじん", "en": "KINGUENZIN"},
+        {"ja": "もうちがう", "en": "MOUTIGAU"}
     ],
     # 種類 2: 【中目】6〜10文字
     [
-        {"ja": "おまえは", "en": "OMAEHA"}, {"ja": "ぱんのまいすう", "en": "PANNOMAISUU"},
-        {"ja": "むだむだむだむだ", "en": "MUDAMUDAMUDAMUDA"}, {"ja": "おらおらおらおら", "en": "ORAORAORAORA"},
-        {"ja": "だがことわる", "en": "DAGAKOTOWARU"}, {"ja": "しんせかい", "en": "SHINSEKAI"},
-        {"ja": "くずが", "en": "KUZUGA"}, {"ja": "あっとうてき", "en": "ATTOUTEKI"},
-        {"ja": "きんきんにひえて", "en": "KINKINNIHIETE"}, {"ja": "はいぼくしゃ", "en": "HAIBOKUSHA"},
-        {"ja": "ごみのようだ", "en": "GOMINOUDA"}, {"ja": "ばるす", "en": "BARUSU"},
-        {"ja": "じぇだいのきかん", "en": "JEDAINOKIKAN"}, {"ja": "くろーんうぉーず", "en": "KUROONWOOZU"},
-        {"ja": "ふるこん", "en": "FURUKON"}, {"ja": "むめんらいだー", "en": "MUMENRAIDAA"},
-        {"ja": "じてんしゃ", "en": "JITENSHA"}, {"ja": "しんかいおう", "en": "SHINKAIOU"},
-        {"ja": "ぼろす", "en": "BOROSU"}, {"ja": "めぐみん", "en": "MEGUMIN"},{"ja": "西国分寺のトイレ", "en": "nisikokubunnzinotoire"}
-        
+        {"ja": "おまえは", "en": "OMAEHA"},{"ja": "ぱんのまいすう", "en": "PANNOMAISUU"},
+        {"ja": "むだむだむだむだ", "en": "MUDAMUDAMUDAMUDA"},{"ja": "おらおらおらおら", "en": "ORAORAORAORA"},
+        {"ja": "だがことわる", "en": "DAGAKOTOWARU"},{"ja": "しんせかい", "en": "SINSEKAI"},
+        {"ja": "くずが", "en": "KUZUGA"},{"ja": "あっとうてき", "en": "ATTOUTEKI"},
+        {"ja": "きんきんにひえて", "en": "KINKINNIHIETE"},{"ja": "はいぼくしゃ", "en": "HAIBOKUSYA"},
+        {"ja": "ごみのようだ", "en": "GOMINOYOUDA"},{"ja": "ばるす", "en": "BARUSU"},
+        {"ja": "じぇだいのきかん", "en": "JEDAINOKIKAN"},{"ja": "くろーんうぉーず", "en": "KUROONWOOZU"},
+        {"ja": "ふるこん", "en": "HURUKON"},{"ja": "むめんらいだー", "en": "MUMENRAIDAA"},
+        {"ja": "じてんしゃ", "en": "ZITENSYA"},{"ja": "しんかいおう", "en": "SINKAIOU"},
+        {"ja": "ぼろす", "en": "BOROSU"},{"ja": "めぐみん", "en": "MEGUMIN"},
+        {"ja": "西国分寺のトイレ", "en": "NISIKOKUBUNNZINOTOIRE"}
     ],
     # 種類 3: 【長め】9〜14文字
     [
-        {"ja": "あっとうてきなぱわー", "en": "ATTOUTEKINAPAWAA"}, {"ja": "しゅみでひーろー", "en": "SHUMIDEHIIROO"},
-        {"ja": "まためろ", "en": "MATAMERO"}, {"ja": "うでたてふせ", "en": "UDETATEFUSE"},
-        {"ja": "じょうたいおこし", "en": "JOUTAIOKOSHI"}, {"ja": "すくわっと", "en": "SUKUWATTO"},
-        {"ja": "らんにんぐ", "en": "RANNINNGU"}, {"ja": "まいにちやる", "en": "MAINICHIYARU"},
-        {"ja": "はげまんと", "en": "HAGEMANTO"}, {"ja": "おんそくのそにっく", "en": "ONSOKUNOSONIKKU"},
-        {"ja": "じごくのふぶき", "en": "JIGOKUNOFUBUKI"}, {"ja": "ぼろすかんたい", "en": "BOROSUKANTAI"},
+        {"ja": "あっとうてきなぱわー", "en": "ATTOUTEKINAPAWAA"},{"ja": "しゅみでひーろー", "en": "SYUMIDEHIIROO"},
+        {"ja": "まためろ", "en": "MATAMERO"},{"ja": "うでたてふせ", "en": "UDETATEHUSE"},
+        {"ja": "じょうたいおこし", "en": "JOUTAIOKOSI"},{"ja": "すくわっと", "en": "SUKUWATTO"},
+        {"ja": "らんにんぐ", "en": "RANNINGU"},{"ja": "まいにちやる", "en": "MAINITIYARU"},
+        {"ja": "はげまんと", "en": "HAGEMANTO"},{"ja": "おんそくのそにっく", "en": "ONSOKUNOSONIKKU"},
+        {"ja": "じごくのふぶき", "en": "ZIGOKUNOHUBUKI"},{"ja": "ぼろすかんたい", "en": "BOROSUKANTAI"},
         {"ja": "ほうこうほう", "en": "HOUKOUHOU"}, {"ja": "よんひゃく", "en": "YONHYAKU"},
-        {"ja": "おおがねもち", "en": "OOGANEMOCHI"}, {"ja": "ですげーむ", "en": "DESUGEEMU"},
-        {"ja": "しゃさつ", "en": "SHASATSU"}, {"ja": "おくうぉん", "en": "OKUWON"},
-        {"ja": "めぐみ", "en": "MEGUMI"}, {"ja": "かなしきかこ", "en": "KANASHIKIKAKO"}
+        {"ja": "おおがねもち", "en": "OOGANEMOTI"},{"ja": "ですげーむ", "en": "DESUGEEMU"},
+        {"ja": "しゃさつ", "en": "SYASATU"},{"ja": "おくうぉん", "en": "OKUWON"},
+        {"ja": "めぐみ", "en": "MEGUMI"}, {"ja": "かなしきかこ", "en": "KANASIKIKAKO"}
     ],
     # 種類 4: 【最長・ボス級】11〜16文字
     [
-        {"ja": "ひんじゃくひんじゃく", "en": "HINJAKUHINJAKU"},
-        {"ja": "しんでいる", "en": "SHINDEIRU"}, {"ja": "つぎのせりふは", "en": "TSUGINOSERIFU"},
-        {"ja": "さいこうにははい", "en": "SAIKOUNIHAI"}, {"ja": "すかいうぉーかー", "en": "SUKAIWOOKAA"},
-        {"ja": "ちちおや", "en": "CHICHIOYA"}, {"ja": "おまえのちちおや", "en": "OMAENOCHICHIOYA"},
-        {"ja": "だーくさいど", "en": "DAAKUSAIDO"}, {"ja": "ぎんがけい", "en": "GINGAKEI"},
-        {"ja": "おわっちまった", "en": "OWATCHIMATTA"}, {"ja": "つよくなりすぎてしまった", "en": "TSUYOKUNARISUGITA"},
-        {"ja": "きょうかい", "en": "KYOUKAI"}, {"ja": "かいじんきょうかい", "en": "KAIJINKYOUKAI"},
-        {"ja": "しゅじんこう", "en": "SHUJINKOU"}, {"ja": "げーむをさせてくれ", "en": "GEEMUWOSURE"},
-        {"ja": "おまえはただのうまだ", "en": "OMAEHATADANOUMA"}, {"ja": "うらぎり", "en": "URAGIRI"},
-        {"ja": "スイパラいこ", "en": "SUIPARAIKO"}, {"ja": "けもの", "en": "kemono"},{"ja": "はやしれいな", "en": "HAYASIREINA"},
+        {"ja": "ひんじゃくひんじゃく", "en": "HINJAKUHINJAKU"},{"ja": "しんでいる", "en": "SINDEIRU"},
+        {"ja": "つぎのせりふは", "en": "TUGINOSERIHU"},{"ja": "さいこうにははい", "en": "SAIKOUNIHAI"},
+        {"ja": "すかいうぉーかー", "en": "SUKAIWOOKAA"},{"ja": "ちちおや", "en": "TITIOYA"},
+        {"ja": "おまえのちちおや", "en": "OMAENOTITIOYA"},{"ja": "だーくさいど", "en": "DAAKUSAIDO"},
+        {"ja": "ぎんがけい", "en": "GINGAKEI"},{"ja": "おわっちまった", "en": "OWATTIMATTA"},
+        {"ja": "つよくなりすぎてしまった", "en": "TUYOKUNARISUGITESIMATTA"},{"ja": "きょうかい", "en": "KYOUKAI"},
+        {"ja": "かいじんきょうかい", "en": "KAIZINKYOUKAI"},{"ja": "しゅじんこう", "en": "SYUZINKOU"},
+        {"ja": "げーむをさせてくれ", "en": "GEEMUWOSASETEKURE"},{"ja": "おまえはただのうまだ", "en": "OMAEHATADANOUMADA"},
+        {"ja": "うらぎり", "en": "URAGIRI"},{"ja": "スイパラいこ", "en": "SUIPARAIKO"},
+        {"ja": "けもの", "en": "KEMONO"},{"ja": "はやしれいな", "en": "HAYASIREINA"},
         {"ja": "ささもとあきら", "en": "SASAMOTOAKIRA"},{"ja": "あまりろり", "en": "AMARIRORI"},
     ]
 ]
@@ -304,9 +305,12 @@ spawn_rate = 180
 
 combo_count = 0      
 shake_frames = 0     
-fire_bolts = []      
+fire_bolts = []       
 particles = []       
 gray_debris = []     
+
+# ★ボム用追加変数
+bomb_flash_frames = 0  # 画面を白くフラッシュさせるフレームカウンタ
 
 def create_enemy():
     angle = random.uniform(0, 2 * math.pi)
@@ -337,10 +341,33 @@ enemies.append(create_enemy())
 running = True
 while running:
     
+    # 現在持っているボムの個数を計算（1000スコアにつき1個、最大3個ストック可能）
+    bomb_count = min(3, score // 1000)
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN and game_state == "PLAYING":
+            
+            # ★エンターキーで敵を一掃するボム機能
+            if event.key == pygame.K_RETURN:
+                if bomb_count > 0:
+                    # スコアから1000点を消費する
+                    score -= 1000
+                    bomb_flash_frames = 8  # 画面フラッシュ時間
+                    shake_frames = 25      # 強い画面シェイク
+                    
+                    if snd_kill: snd_kill.play()
+                    
+                    # 画面内のすべての敵に爆発エフェクトを発生させて消去
+                    for e in enemies:
+                        particles.extend([Particle(e["x"], e["y"], random.choice([GRAY_INNER, GRAY_OUTER])) for _ in range(30)])
+                        gray_debris.extend([GrayDebris(e["x"], e["y"]) for _ in range(5)])
+                    
+                    enemies.clear()
+                    locked_enemy = None
+                continue
+
             pressed_key = event.unicode.upper()
             if len(pressed_key) != 1 or not pressed_key.isalpha(): continue
             
@@ -382,6 +409,7 @@ while running:
                 enemies.clear(); fire_bolts.clear(); particles.clear(); gray_debris.clear()
                 locked_enemy = None
                 score = 0; hp = 5; spawn_rate = 180; spawn_timer = 0; combo_count = 0
+                bomb_flash_frames = 0
                 enemies.append(create_enemy())
                 game_state = "PLAYING"
                 play_bgm("bgm.mp3")
@@ -448,7 +476,9 @@ while running:
         screen.blit(surf_untyped, (int(e["x"]) - total_en_width // 2 + surf_typed.get_width() + offset_x, int(e["y"]) + e["offset_en"] + offset_y))
 
     if game_state == "PLAYING":
-        screen.blit(font_ui.render(f"SCORE: {score}", True, UI_COLOR), (20, 20))
+        # ★ボム数を絵文字（💣）でUI表示
+        bomb_icons = "💣" * bomb_count if bomb_count > 0 else "NONE"
+        screen.blit(font_ui.render(f"SCORE: {score}  (BOMB: {bomb_icons})", True, UI_COLOR), (20, 20))
         screen.blit(font_ui.render(f"LIFE: {hp} / 5", True, UI_COLOR), (20, 60))
     elif game_state == "GAMEOVER":
         mask = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT)).convert_alpha()
